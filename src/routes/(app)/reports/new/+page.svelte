@@ -61,11 +61,7 @@
 	setContext('newReportImages', images);
 </script>
 
-<div class="fixed top-0 left-0 bg-white w-full text-dark-green text-2xl font-bold py-4 shadow-sm">
-	<h1 class="text-center">New report</h1>
-</div>
-
-<div class="mt-16 pt-6">
+<div class="pt-6">
 	<h2 class="font-bold text-center text-2xl">Confirm report evidence</h2>
 
 	<p class="text-sm mt-4 text-center">

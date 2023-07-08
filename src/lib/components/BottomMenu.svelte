@@ -6,7 +6,7 @@
 	import FeUser from '~icons/fe/user';
 </script>
 
-<div class="fixed bottom-0 bg-white w-full py-3">
+<div class="sticky bottom-0 bg-white w-full py-3">
 	<div class="container mx-auto flex justify-center items-center gap-12">
 		<a
 			class:!bg-light-green={$page.url.pathname === '/'}
