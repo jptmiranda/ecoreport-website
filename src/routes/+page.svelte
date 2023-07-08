@@ -5,7 +5,7 @@
 </script>
 
 <h1
-	class="mt-12 text-transparent bg-gradient-to-r from-[#17742F] to-[#E0E482] text-[40px] bg-clip-text leading-normal font-bold inline-block"
+	class="mt-4 text-transparent bg-gradient-to-r from-[#17742F] to-[#E0E482] text-[40px] bg-clip-text leading-normal font-bold inline-block"
 >
 	<span class="text-[#17742f] font-normal">Eco</span>Report
 </h1>
@@ -15,7 +15,7 @@
 <img class="mx-auto" src={logo} alt="Ecoreport" />
 
 <div class="flex flex-col gap-y-3">
-	<Button text="New Report" full>
+	<Button text="New Report" full cta>
 		<FeArrowRight slot="suffix-icon" />
 	</Button>
 

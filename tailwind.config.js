@@ -7,7 +7,9 @@ export default {
 				button: '0px 4px 20px 0px rgba(23, 116, 47, 0.10)'
 			},
 			colors: {
-				'dark-green': '#17742f'
+				'dark-green': '#17742f',
+				green: '#E0E482',
+				'light-green': '#F9FAE6'
 			}
 		}
 	},
