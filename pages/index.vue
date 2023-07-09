@@ -13,7 +13,13 @@ definePageMeta({ layout: "homepage" });
     Faça a diferença, report a poluição
   </h2>
 
-  <img class="mx-auto w-full" src="/logo.png" alt="Ecoreport" />
+  <img
+    width="342"
+    height="382"
+    class="mx-auto w-full h-auto"
+    src="/logo.png"
+    alt="Ecoreport"
+  />
 
   <div class="flex flex-col gap-y-3">
     <Button
