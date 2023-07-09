@@ -1,6 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  nitro: {
+    preset: "node-server",
+  },
   modules: ["@vite-pwa/nuxt", "@nuxtjs/tailwindcss", "nuxt-icon"],
   extends: ["nuxt-seo-kit"],
   app: {
