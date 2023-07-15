@@ -1,5 +1,5 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div>Index</div>
+  <div>App</div>
 </template>

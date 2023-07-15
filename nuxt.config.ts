@@ -1,28 +1,36 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  nitro: {
-    preset: "node-server",
-  },
-  modules: ["@vite-pwa/nuxt", "@nuxtjs/tailwindcss", "nuxt-icon"],
-  extends: ["nuxt-seo-kit"],
   app: {
     head: {
-      script: [
+      link: [
+        { rel: "preconnect", href: "https://fonts.googleapis.com" },
         {
-          src: "/vendor/preline/dist/preline.js",
-          body: true,
-          defer: true,
+          rel: "preconnect",
+          href: "https://fonts.gstatic.com",
+          crossorigin: "anonymous",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap",
         },
       ],
     },
   },
-  runtimeConfig: {
-    public: {
-      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || "https://ecoreport.pt",
-      siteName: "EcoReport",
-      siteDescription: "Platform to report pollution!",
-      language: "en",
-    },
+  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/i18n"],
+  css: ["~/assets/css/main.css"],
+  i18n: {
+    locales: [
+      {
+        code: "en",
+        file: "en.yaml",
+      },
+      {
+        code: "pt",
+        file: "pt.yaml",
+      },
+    ],
+    langDir: "lang",
+    defaultLocale: "pt",
   },
 });
