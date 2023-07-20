@@ -1,8 +1,0 @@
-routes:
-  home: /
-  analytics: /analytics
-  partners: /partners
-  sponsors: /sponsors
-  app: /app
-navbar:
-  home: Home
