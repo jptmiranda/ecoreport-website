@@ -6,7 +6,6 @@ export default defineConfig({
 	plugins: [
 		sveltekit(),
 		icons({
-			autoInstall: true,
 			scale: 1.2,
 			compiler: 'svelte'
 		})
