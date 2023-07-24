@@ -33,7 +33,14 @@
 			>
 		</div>
 
-		<CldImage width={538} height={538} src="hero_bg_we3avh" alt="Hero" sizes="100vw" />
+		<CldImage
+			width={538}
+			height={538}
+			src="hero_bg_we3avh"
+			alt="Hero"
+			format="webp"
+			sizes="100vw"
+		/>
 	</div>
 </section>
 

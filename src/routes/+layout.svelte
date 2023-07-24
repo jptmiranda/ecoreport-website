@@ -1,9 +1,6 @@
 <script>
 	import '$lib/css/main.css';
 	import Navbar from '$lib/components/Navbar.svelte';
-	import { register } from 'swiper/element/bundle';
-
-	register();
 </script>
 
 <svelte:head>

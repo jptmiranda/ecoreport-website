@@ -8,9 +8,6 @@ dependencies:
   svelte-cloudinary:
     specifier: ^1.0.3
     version: 1.0.3(svelte@4.1.1)
-  swiper:
-    specifier: ^10.0.4
-    version: 10.0.4
 
 devDependencies:
   '@iconify-json/fe':
@@ -2704,11 +2701,6 @@ packages:
       locate-character: 3.0.0
       magic-string: 0.30.1
       periscopic: 3.1.0
-
-  /swiper@10.0.4:
-    resolution: {integrity: sha512-DlNR3KiaVkPep6RraZ2tNr7lvyuzELuR+4NZr4wO42t0UworIO3DxDlz8b5Q3uUioh7cJad99EdRJLkPF+r8Ag==}
-    engines: {node: '>= 4.7.0'}
-    dev: false
 
   /tailwindcss@3.3.3:
     resolution: {integrity: sha512-A0KgSkef7eE4Mf+nKJ83i75TMyq8HqY3qmFIJSWy8bNt0v1lG7jUcpGpoTFxAwYcWOphcTBLPPJg+bDfhDf52w==}

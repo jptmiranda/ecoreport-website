@@ -41,7 +41,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"svelte-cloudinary": "^1.0.3",
-		"swiper": "^10.0.4"
+		"svelte-cloudinary": "^1.0.3"
 	}
 }
