@@ -39,5 +39,9 @@
 		"vite": "^4.4.2",
 		"vitest": "^0.32.2"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"svelte-cloudinary": "^1.0.3",
+		"swiper": "^10.0.4"
+	}
 }
