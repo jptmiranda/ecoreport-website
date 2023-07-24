@@ -1,6 +1,13 @@
 <script>
 	import Carousel from '$lib/components/Carousel.svelte';
-	import { CldImage } from 'svelte-cloudinary';
+	import { getCldImageUrl } from 'svelte-cloudinary';
+
+	const heroImage = getCldImageUrl({
+		src: 'hero_bg_we3avh',
+		width: 538,
+		height: 538,
+		format: 'webp'
+	});
 </script>
 
 <section class="container mx-auto px-4 mt-14">
@@ -33,14 +40,7 @@
 			>
 		</div>
 
-		<CldImage
-			width={538}
-			height={538}
-			src="hero_bg_we3avh"
-			alt="Hero"
-			format="webp"
-			sizes="100vw"
-		/>
+		<img src={heroImage} alt="hero" width="538" height="538" sizes="100vw" />
 	</div>
 </section>
 
