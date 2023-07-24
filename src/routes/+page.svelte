@@ -11,7 +11,7 @@
 </script>
 
 <section class="container mx-auto px-4 mt-14">
-	<div class="flex justify-center gap-x-14 xl:gap-x-28">
+	<div class="flex justify-center items-start gap-x-14 xl:gap-x-28">
 		<div class="max-w-lg">
 			<h1
 				class="text-transparent bg-gradient-to-r from-[#17742F] to-[#E0E482] bg-clip-text leading-normal font-bold inline-block text-5xl"
