@@ -1,6 +1,7 @@
 <script>
-	import Carousel from '$lib/components/Carousel.svelte';
-	import { getCldImageUrl } from 'svelte-cloudinary';
+	import AppCarousel from '$lib/components/homepage/AppCarousel.svelte';
+	import ProviderCarousel from '$lib/components/homepage/ProviderCarousel.svelte';
+	import { CldImage, getCldImageUrl } from 'svelte-cloudinary';
 
 	const heroImage = getCldImageUrl({
 		src: 'hero_bg_we3avh',
@@ -45,5 +46,9 @@
 </section>
 
 <section class="container mx-auto px-4 mt-12">
-	<Carousel />
+	<ProviderCarousel />
+</section>
+
+<section class="container mx-auto px-4 mt-8">
+	<AppCarousel />
 </section>

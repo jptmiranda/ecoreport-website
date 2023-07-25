@@ -1,5 +1,6 @@
 <script>
 	import '$lib/css/main.css';
+	import 'blaze-slider/dist/blaze.css';
 	import Navbar from '$lib/components/Navbar.svelte';
 </script>
 

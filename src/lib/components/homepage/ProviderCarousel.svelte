@@ -1,10 +1,9 @@
 <script lang="ts">
-	import BlazeSlider from 'blaze-slider';
-	import 'blaze-slider/dist/blaze.css';
 	import { onMount } from 'svelte';
+	import BlazeSlider from 'blaze-slider';
 
-	const partnerships: string[] = Array(16).fill('Parceiro');
 	let carousel: HTMLElement;
+	const partnerships: string[] = Array(16).fill('Parceiro');
 
 	onMount(() => {
 		new BlazeSlider(carousel, {

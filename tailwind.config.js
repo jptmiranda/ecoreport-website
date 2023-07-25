@@ -2,6 +2,13 @@
 export default {
 	content: ['./src/**/*.{html,js,svelte,ts}', 'node_modules/preline/dist/*.js'],
 	theme: {
+		screens: {
+			sm: '576px',
+			md: '768px',
+			lg: '1024px',
+			xl: '1280px',
+			'2xl': '1536px'
+		},
 		extend: {
 			boxShadow: {
 				s: '0px 2px 10px 0px rgba(23, 116, 47, 0.10)'
