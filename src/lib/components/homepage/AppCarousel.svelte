@@ -61,7 +61,7 @@
 							width={177}
 							height={380}
 							src={image}
-							alt={`"App - Ecrã ${index + 1}`}
+							alt={`App - Ecrã ${index + 1}`}
 							sizes="100vw"
 						/>
 					</div>

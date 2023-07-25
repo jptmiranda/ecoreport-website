@@ -10,6 +10,7 @@
 </svelte:head>
 
 <Navbar />
-<main>
+
+<main class="pb-28">
 	<slot />
 </main>
