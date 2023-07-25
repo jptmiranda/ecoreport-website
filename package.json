@@ -41,6 +41,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"blaze-slider": "^1.9.3",
 		"svelte-cloudinary": "^1.0.3"
 	}
 }
