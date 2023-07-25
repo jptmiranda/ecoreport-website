@@ -52,3 +52,17 @@
 <section class="container mx-auto px-4 mt-8">
 	<AppCarousel />
 </section>
+
+<section class="container mx-auto px-4 mt-24">
+	<h2
+		class="mx-auto max-w-2xl text-center text-[40px] text-transparent bg-gradient-to-r from-[#17742F] to-[#E0E482] bg-clip-text font-bold"
+	>
+		Quando encontrar uma área poluída
+		<span class="font-bold">fotografe e inclua a geolocalização</span>
+	</h2>
+
+	<p class="mt-8 mx-auto max-w-2xl text-2xl text-center">
+		Garantimos que o report é enviado para a entidade responsável por limpar a zona indentificada,
+		garantido que a <span class="font-bold">situação é resolvida de forma rápida e eficaz</span>.
+	</p>
+</section>
