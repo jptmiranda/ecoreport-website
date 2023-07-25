@@ -31,23 +31,21 @@
 	});
 </script>
 
-<div class="container">
-	<div bind:this={carousel} class="blaze-slider">
-		<div class="blaze-container">
-			<div class="blaze-track-container">
-				<div class="blaze-track py-4 px-2">
-					{#each partnerships as partnership}
-						<div class="shadow-s px-9 py-4">
-							<div class="bg-light-green w-full h-24 grid place-content-center">
-								<div
-									class="text-transparent bg-gradient-to-r from-[#17742F] to-[#E0E482] text-2xl bg-clip-text leading-normal font-bold inline-block"
-								>
-									{partnership}
-								</div>
+<div bind:this={carousel} class="blaze-slider">
+	<div class="blaze-container">
+		<div class="blaze-track-container">
+			<div class="blaze-track py-4 px-2">
+				{#each partnerships as partnership}
+					<div class="shadow-s px-9 py-4">
+						<div class="bg-light-green w-full h-24 grid place-content-center">
+							<div
+								class="text-transparent bg-gradient-to-r from-[#17742F] to-[#E0E482] text-2xl bg-clip-text leading-normal font-bold inline-block"
+							>
+								{partnership}
 							</div>
 						</div>
-					{/each}
-				</div>
+					</div>
+				{/each}
 			</div>
 		</div>
 	</div>

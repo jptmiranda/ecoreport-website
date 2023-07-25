@@ -44,6 +44,6 @@
 	</div>
 </section>
 
-<section class="container mx-auto px-4">
+<section class="container mx-auto px-4 mt-12">
 	<Carousel />
 </section>
