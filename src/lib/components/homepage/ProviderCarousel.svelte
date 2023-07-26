@@ -3,7 +3,6 @@
 	import BlazeSlider from 'blaze-slider';
 
 	let carousel: HTMLElement;
-	const partnerships: string[] = Array(16).fill('Parceiro');
 
 	onMount(() => {
 		new BlazeSlider(carousel, {
@@ -34,12 +33,10 @@
 	<div class="blaze-container">
 		<div class="blaze-track-container">
 			<div class="blaze-track py-4 px-2">
-				{#each partnerships as partnership}
+				{#each Array(16) as _}
 					<div class="shadow-s px-9 py-4">
 						<div class="bg-light-green w-full h-24 grid place-content-center">
-							<div class="text-eco-gradient text-2xl font-bold">
-								{partnership}
-							</div>
+							<div class="text-eco-gradient text-2xl font-bold">Parceiro</div>
 						</div>
 					</div>
 				{/each}
