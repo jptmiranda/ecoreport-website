@@ -39,37 +39,51 @@
 	});
 </script>
 
-<h2 class="text-center max-w-2xl mx-auto text-dark-green text-[32px] leading-[130%]">
-	O EcoReport torna
-	<span class="font-bold"> fácil e acessível reportar áreas poluídas</span>.
-</h2>
+<section class="container mx-auto px-4 mt-8">
+	<h2 class="text-center max-w-2xl mx-auto text-dark-green text-[32px] leading-[130%]">
+		O EcoReport torna
+		<span class="font-bold"> fácil e acessível reportar áreas poluídas</span>.
+	</h2>
 
-<h3 class="mt-12 text-center max-w-2xl mx-auto text-[32px] leading-[130%]">
-	Report em menos de <span class="font-bold">1 min!</span>
-</h3>
+	<h3 class="mt-12 text-center max-w-2xl mx-auto text-[32px] leading-[130%]">
+		Report em menos de <span class="font-bold">1 min!</span>
+	</h3>
 
-<div
-	bind:this={carousel}
-	class="mt-10 blaze-slider max-w-[177px] sm:max-w-[390px] md:max-w-[590px] lg:max-w-[810px] xl:max-w-[1012px] mx-auto"
->
-	<div class="blaze-container">
-		<div class="blaze-track-container">
-			<div class="blaze-track">
-				{#each images as image, index}
-					<div class="rounded-2xl border-4 overflow-hidden">
-						<CldImage
-							width={177}
-							height={380}
-							src={image}
-							alt={`App - Ecrã ${index + 1}`}
-							sizes="100vw"
-						/>
-					</div>
-				{/each}
+	<div
+		bind:this={carousel}
+		class="mt-10 blaze-slider max-w-[177px] sm:max-w-[390px] md:max-w-[590px] lg:max-w-[810px] xl:max-w-[1012px] mx-auto"
+	>
+		<div class="blaze-container">
+			<div class="blaze-track-container">
+				<div class="blaze-track">
+					{#each images as image, index}
+						<div class="rounded-2xl border-4 overflow-hidden">
+							<CldImage
+								width={177}
+								height={380}
+								src={image}
+								alt={`App - Ecrã ${index + 1}`}
+								sizes="100vw"
+							/>
+						</div>
+					{/each}
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
+</section>
+
+<section class="container mx-auto px-4 mt-24">
+	<h2 class="mx-auto max-w-2xl text-center text-4xl text-eco-gradient">
+		Quando encontrar uma área poluída
+		<span class="font-bold">fotografe e inclua a geolocalização</span>
+	</h2>
+
+	<p class="mt-8 mx-auto max-w-2xl text-2xl text-center">
+		Garantimos que o report é enviado para a entidade responsável por limpar a zona indentificada,
+		garantido que a <span class="font-bold">situação é resolvida de forma rápida e eficaz</span>.
+	</p>
+</section>
 
 <style>
 	.blaze-slider {
