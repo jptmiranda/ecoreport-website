@@ -42,14 +42,11 @@
 	</h2>
 
 	<div class="hs-accordion-group divide-y mt-4 xl:mt-10 last:border-b">
-		{#each faqs as faq}
-			<div
-				class="hs-accordion bg-white -mt-px"
-				id="hs-basic-with-title-and-arrow-stretched-heading-one"
-			>
+		{#each faqs as faq, index}
+			<div class="hs-accordion bg-white -mt-px" id={`faq-question-${index}`}>
 				<button
 					class="hs-accordion-toggle hs-accordion-active:text-dark-green group py-8 inline-flex items-center justify-between gap-x-3 w-full font-semibold text-left transition text-lg lg:text-xl xl:text-2xl"
-					aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-one"
+					aria-controls={`faq-answer-${index}`}
 				>
 					{faq.question}
 
@@ -105,9 +102,9 @@
 				</button>
 
 				<div
-					id="hs-basic-with-title-and-arrow-stretched-collapse-one"
+					id={`faq-answer-${index}`}
 					class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
-					aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-one"
+					aria-labelledby={`faq-question-${index}`}
 				>
 					<div class="pb-8">
 						{faq.answer}
