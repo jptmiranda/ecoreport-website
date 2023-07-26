@@ -1,4 +1,4 @@
-<section class="container mx-auto px-4 mt-36">
+<section class="container mx-auto px-4 lg:px-8 mt-36">
 	<div class="flex items-center justify-center gap-x-10">
 		<div class="grid grid-cols-[repeat(2,minmax(0,297px))] gap-x-6 gap-y-10">
 			{#each Array(6) as _}

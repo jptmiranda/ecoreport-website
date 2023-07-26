@@ -1,4 +1,4 @@
-<section class="container mx-auto px-4 mt-36">
+<section class="container mx-auto px-4 lg:px-8 mt-36">
 	<div class="flex items-center gap-x-20 2xl:justify-center">
 		<div class="flex gap-x-4 pt-4">
 			<div class="w-[104px] h-[207px] border-4 border-[#312f2e] rounded-2xl" />

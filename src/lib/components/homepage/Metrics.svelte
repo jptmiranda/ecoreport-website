@@ -2,7 +2,7 @@
 	import { CldImage } from 'svelte-cloudinary';
 </script>
 
-<section class="container mx-auto px-4 mt-24">
+<section class="container mx-auto px-4 lg:px-8 mt-24">
 	<div class="flex items-center justify-center gap-x-32">
 		<div>
 			<h2 class="text-eco-gradient text-5xl leading-normal font-bold">Dados e Métricas</h2>

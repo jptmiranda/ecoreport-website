@@ -18,7 +18,7 @@
 	class="sticky top-0 flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-sm py-4 shadow-md"
 >
 	<nav
-		class="container mx-auto px-4 sm:flex sm:items-center sm:justify-between"
+		class="container mx-auto px-4 lg:px-8 sm:flex sm:items-center sm:justify-between"
 		aria-label="Global"
 	>
 		<div class="flex items-center justify-between">

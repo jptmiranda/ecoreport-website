@@ -2,7 +2,7 @@
 	import { CldImage } from 'svelte-cloudinary';
 </script>
 
-<section class="container mx-auto px-4 mt-24">
+<section class="container mx-auto px-4 lg:px-8 mt-24">
 	<h2 class="text-eco-gradient font-bold text-5xl leading-normal text-center">
 		Tipos de poluição que pode reportar
 	</h2>

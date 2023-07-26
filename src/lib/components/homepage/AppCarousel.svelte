@@ -39,7 +39,7 @@
 	});
 </script>
 
-<section class="container mx-auto px-4 mt-8">
+<section class="container mx-auto px-4 lg:px-8 mt-8">
 	<h2 class="text-center max-w-2xl mx-auto text-dark-green text-[32px] leading-[130%]">
 		O EcoReport torna
 		<span class="font-bold"> fácil e acessível reportar áreas poluídas</span>.
@@ -73,7 +73,7 @@
 	</div>
 </section>
 
-<section class="container mx-auto px-4 mt-24">
+<section class="container mx-auto px-4 lg:px-8 mt-24">
 	<h2 class="mx-auto max-w-2xl text-center text-4xl text-eco-gradient">
 		Quando encontrar uma área poluída
 		<span class="font-bold">fotografe e inclua a geolocalização</span>

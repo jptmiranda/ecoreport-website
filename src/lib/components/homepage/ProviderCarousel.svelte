@@ -29,7 +29,7 @@
 	});
 </script>
 
-<section class="container mx-auto px-4 mt-12">
+<section class="container mx-auto px-4 lg:px-8 mt-12">
 	<div bind:this={carousel} class="blaze-slider">
 		<div class="blaze-container">
 			<div class="blaze-track-container">

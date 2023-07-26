@@ -1,4 +1,4 @@
-<div class="container mx-auto px-4 mt-36">
+<div class="container mx-auto px-4 lg:px-8 mt-36">
 	<h2 class="text-eco-gradient text-5xl leading-normal font-bold text-center max-w-[740px] mx-auto">
 		Faça o Download do EcoReport e Junte-se à Comunidade
 	</h2>
