@@ -67,32 +67,38 @@
 	</h2>
 
 	<div class="mt-16 grid grid-cols-[repeat(2,minmax(0,507px))] justify-center gap-y-8 gap-x-10">
-		<div class="rounded-lg overflow-hidden relative">
-			<CldImage src="type_urban_ofvbba" width={507} height={165} sizes="100vw" />
+		<div class="rounded-lg overflow-hidden relative shadow-s">
+			<CldImage src="type_urban_ofvbba" alt="Tipo Urbano" width={507} height={165} sizes="100vw" />
 
 			<div class="urban absolute inset-0 grid place-content-center">
 				<div class="text-white text-4xl">Poluição <span class="font-bold">Urbana</span></div>
 			</div>
 		</div>
 
-		<div class="rounded-lg overflow-hidden relative">
-			<CldImage src="type_forest_ikasyo" width={507} height={165} sizes="100vw" />
+		<div class="rounded-lg overflow-hidden relative shadow-s">
+			<CldImage
+				src="type_forest_ikasyo"
+				alt="Tipo Florestal"
+				width={507}
+				height={165}
+				sizes="100vw"
+			/>
 
 			<div class="forest absolute inset-0 grid place-content-center">
 				<div class="text-white text-4xl">Poluição <span class="font-bold">Florestal</span></div>
 			</div>
 		</div>
 
-		<div class="rounded-lg overflow-hidden relative">
-			<CldImage src="type_sea_ygvlkl" width={507} height={165} sizes="100vw" />
+		<div class="rounded-lg overflow-hidden relative shadow-s">
+			<CldImage src="type_sea_ygvlkl" alt="Tipo Marítima" width={507} height={165} sizes="100vw" />
 
 			<div class="sea absolute inset-0 grid place-content-center">
 				<div class="text-white text-4xl">Poluição <span class="font-bold">Marítima</span></div>
 			</div>
 		</div>
 
-		<div class="rounded-lg overflow-hidden relative">
-			<CldImage src="type_beach_bivef5" width={507} height={165} sizes="100vw" />
+		<div class="rounded-lg overflow-hidden relative shadow-s">
+			<CldImage src="type_beach_bivef5" alt="Tipo Balnear" width={507} height={165} sizes="100vw" />
 
 			<div class="beach absolute inset-0 grid place-content-center">
 				<div class="text-white text-4xl">Poluição <span class="font-bold">Balnear</span></div>
@@ -101,20 +107,100 @@
 	</div>
 </section>
 
+<section class="container mx-auto px-4 mt-36">
+	<div class="flex items-center gap-x-20 2xl:justify-center">
+		<div class="flex gap-x-4 pt-4">
+			<div class="w-[104px] h-[207px] border-4 border-[#312f2e] rounded-2xl" />
+
+			<div class="w-[104px] h-[207px] border-4 border-[#312f2e] rounded-2xl" />
+
+			<div class="w-[421px] h-[308px] border-4 border-[#312f2e] rounded-2xl" />
+		</div>
+
+		<div class="self-start">
+			<h2 class="text-eco-gradient text-5xl font-bold">A nossa missão</h2>
+
+			<h3 class="mt-6 text-3xl text-dark-green max-w-[368px]">
+				<span class="font-bold">Identificar, reportar e monitorizar</span> áreas afectadas pela poluição.
+			</h3>
+
+			<p class="mt-6 max-w-[396px]">
+				O EcoReport é uma iniciativa dedicada a <span class="font-bold"
+					>identificar e reportar zonas poluídas em todo o território português</span
+				>. Com a nossa aplicação pode reportar áreas poluidas de forma rápida e eficiente.
+			</p>
+		</div>
+	</div>
+
+	<div class="grid place-content-center mt-24">
+		<a
+			href="/"
+			class="py-4 px-9 rounded-[65px] border border-light-green shadow-s text-dark-green font-semibold text-xl"
+		>
+			Saber mais
+		</a>
+	</div>
+</section>
+
+<section class="container mx-auto px-4 mt-24">
+	<div class="flex items-center justify-center gap-x-32">
+		<div>
+			<h2 class="text-eco-gradient text-5xl font-bold">Dados e Métricas</h2>
+
+			<h3 class="mt-6 text-3xl text-dark-green max-w-[356px]">
+				Consciencialização para <span class="font-bold">um Portugal mais limpo</span>
+			</h3>
+
+			<p class="mt-6 max-w-[502px]">
+				No EcoReport, <span class="font-bold"
+					>acreditamos na transparência e no poder dos dados para impulsionar a mudança</span
+				>. Disponibilizamos as métricas e informações dos reports de poluição submetidos pelos
+				utilizadores. A partilha dos dados visa
+				<span class="font-bold"
+					>promover a consciencialização não apenas entre os cidadãos, mas também entre as entidades
+					responsáveis pela limpeza e segurança</span
+				> do território nacional.
+			</p>
+
+			<p class="mt-6 max-w-[502px]">
+				Acreditamos que, ao compartilhar essas informações, podemos <span class="font-bold"
+					>criar uma consciência coletiva e promover ações efetivas para um Portugal mais limpo e
+					sustentável</span
+				>.
+			</p>
+
+			<a
+				href="/reports"
+				class="mt-6 py-4 px-9 rounded-[65px] border border-light-green shadow-s text-dark-green font-semibold text-xl inline-block"
+			>
+				Explorar Dados e Métricas
+			</a>
+		</div>
+
+		<CldImage
+			class="rounded"
+			src="landing_metrics_oi2d64"
+			alt="Métricas"
+			width={431}
+			height={538}
+		/>
+	</div>
+</section>
+
 <style>
 	.urban {
-		background: linear-gradient(180deg, #9fabbc 0%, rgba(159, 171, 188, 0) 100%);
+		background: linear-gradient(0deg, #9fabbc 0%, rgba(159, 171, 188, 0) 100%);
 	}
 
 	.forest {
-		background: linear-gradient(180deg, #007713 0%, rgba(255, 229, 136, 0) 100%);
+		background: linear-gradient(0, #007713 0%, rgba(255, 229, 136, 0) 100%);
 	}
 
 	.sea {
-		background: linear-gradient(180deg, #69dbff 0%, rgba(105, 219, 255, 0) 100%);
+		background: linear-gradient(0, #69dbff 0%, rgba(105, 219, 255, 0) 100%);
 	}
 
 	.beach {
-		background: linear-gradient(180deg, #c09932 0%, rgba(255, 229, 136, 0) 100%);
+		background: linear-gradient(0, #c09932 0%, rgba(255, 229, 136, 0) 100%);
 	}
 </style>
