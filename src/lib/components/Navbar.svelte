@@ -22,10 +22,7 @@
 		aria-label="Global"
 	>
 		<div class="flex items-center justify-between">
-			<a
-				href="/"
-				class="text-transparent bg-gradient-to-r from-[#17742F] to-[#E0E482] text-2xl bg-clip-text leading-normal font-bold inline-block"
-			>
+			<a href="/" class="text-eco-gradient text-2xl leading-normal font-bold">
 				<span class="text-[#17742f] font-normal">Eco</span>Report
 			</a>
 

@@ -14,11 +14,7 @@
 <section class="container mx-auto px-4 mt-14">
 	<div class="flex justify-center items-start gap-x-14 xl:gap-x-28">
 		<div class="max-w-lg">
-			<h1
-				class="text-transparent bg-gradient-to-r from-[#17742F] to-[#E0E482] bg-clip-text leading-normal font-bold inline-block text-5xl"
-			>
-				Faça a diferença e reporte a poluição
-			</h1>
+			<h1 class="text-eco-gradient font-bold text-6xl">Faça a diferença e reporte a poluição</h1>
 
 			<h2 class="mt-6 text-dark-green text-2xl">
 				Seja parte da mudança e <span class="font-bold"
@@ -54,9 +50,7 @@
 </section>
 
 <section class="container mx-auto px-4 mt-24">
-	<h2
-		class="mx-auto max-w-2xl text-center text-[40px] text-transparent bg-gradient-to-r from-[#17742F] to-[#E0E482] bg-clip-text font-bold"
-	>
+	<h2 class="mx-auto max-w-2xl text-center text-4xl text-eco-gradient">
 		Quando encontrar uma área poluída
 		<span class="font-bold">fotografe e inclua a geolocalização</span>
 	</h2>
@@ -66,3 +60,61 @@
 		garantido que a <span class="font-bold">situação é resolvida de forma rápida e eficaz</span>.
 	</p>
 </section>
+
+<section class="container mx-auto px-4 mt-24">
+	<h2 class="text-eco-gradient font-bold text-5xl text-center">
+		Tipos de poluição que pode reportar
+	</h2>
+
+	<div class="mt-16 grid grid-cols-[repeat(2,minmax(0,507px))] justify-center gap-y-8 gap-x-10">
+		<div class="rounded-lg overflow-hidden relative">
+			<CldImage src="type_urban_ofvbba" width={507} height={165} sizes="100vw" />
+
+			<div class="urban absolute inset-0 grid place-content-center">
+				<div class="text-white text-4xl">Poluição <span class="font-bold">Urbana</span></div>
+			</div>
+		</div>
+
+		<div class="rounded-lg overflow-hidden relative">
+			<CldImage src="type_forest_ikasyo" width={507} height={165} sizes="100vw" />
+
+			<div class="forest absolute inset-0 grid place-content-center">
+				<div class="text-white text-4xl">Poluição <span class="font-bold">Florestal</span></div>
+			</div>
+		</div>
+
+		<div class="rounded-lg overflow-hidden relative">
+			<CldImage src="type_sea_ygvlkl" width={507} height={165} sizes="100vw" />
+
+			<div class="sea absolute inset-0 grid place-content-center">
+				<div class="text-white text-4xl">Poluição <span class="font-bold">Marítima</span></div>
+			</div>
+		</div>
+
+		<div class="rounded-lg overflow-hidden relative">
+			<CldImage src="type_beach_bivef5" width={507} height={165} sizes="100vw" />
+
+			<div class="beach absolute inset-0 grid place-content-center">
+				<div class="text-white text-4xl">Poluição <span class="font-bold">Balnear</span></div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.urban {
+		background: linear-gradient(180deg, #9fabbc 0%, rgba(159, 171, 188, 0) 100%);
+	}
+
+	.forest {
+		background: linear-gradient(180deg, #007713 0%, rgba(255, 229, 136, 0) 100%);
+	}
+
+	.sea {
+		background: linear-gradient(180deg, #69dbff 0%, rgba(105, 219, 255, 0) 100%);
+	}
+
+	.beach {
+		background: linear-gradient(180deg, #c09932 0%, rgba(255, 229, 136, 0) 100%);
+	}
+</style>
