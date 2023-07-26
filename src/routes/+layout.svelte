@@ -3,6 +3,7 @@
 	import '$lib/css/main.postcss';
 	import 'blaze-slider/dist/blaze.css';
 	import Navbar from '$lib/components/Navbar.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 </script>
 
 <svelte:head>
@@ -15,3 +16,5 @@
 <main class="pb-28">
 	<slot />
 </main>
+
+<Footer />

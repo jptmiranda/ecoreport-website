@@ -34,7 +34,9 @@
 	];
 </script>
 
-<h2 class="text-eco-gradient text-5xl font-bold text-center">Perguntas Frequentes</h2>
+<h2 class="text-eco-gradient text-5xl leading-normal font-bold text-center">
+	Perguntas Frequentes
+</h2>
 
 <div class="hs-accordion-group divide-y mt-10 last:border-b">
 	{#each faqs as faq}

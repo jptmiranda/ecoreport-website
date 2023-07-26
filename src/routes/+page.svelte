@@ -15,7 +15,9 @@
 <section class="container mx-auto px-4 mt-14">
 	<div class="flex justify-center items-start gap-x-14 xl:gap-x-28">
 		<div class="max-w-lg">
-			<h1 class="text-eco-gradient font-bold text-6xl">Faça a diferença e reporte a poluição</h1>
+			<h1 class="text-eco-gradient font-bold text-6xl leading-normal">
+				Faça a diferença e reporte a poluição
+			</h1>
 
 			<h2 class="mt-6 text-dark-green text-2xl">
 				Seja parte da mudança e <span class="font-bold"
@@ -63,7 +65,7 @@
 </section>
 
 <section class="container mx-auto px-4 mt-24">
-	<h2 class="text-eco-gradient font-bold text-5xl text-center">
+	<h2 class="text-eco-gradient font-bold text-5xl leading-normal text-center">
 		Tipos de poluição que pode reportar
 	</h2>
 
@@ -119,7 +121,7 @@
 		</div>
 
 		<div class="self-start">
-			<h2 class="text-eco-gradient text-5xl font-bold">A nossa missão</h2>
+			<h2 class="text-eco-gradient text-5xl leading-normal font-bold">A nossa missão</h2>
 
 			<h3 class="mt-6 text-3xl text-dark-green max-w-[368px]">
 				<span class="font-bold">Identificar, reportar e monitorizar</span> áreas afectadas pela poluição.
@@ -146,7 +148,7 @@
 <section class="container mx-auto px-4 mt-24">
 	<div class="flex items-center justify-center gap-x-32">
 		<div>
-			<h2 class="text-eco-gradient text-5xl font-bold">Dados e Métricas</h2>
+			<h2 class="text-eco-gradient text-5xl leading-normal font-bold">Dados e Métricas</h2>
 
 			<h3 class="mt-6 text-3xl text-dark-green max-w-[356px]">
 				Consciencialização para <span class="font-bold">um Portugal mais limpo</span>
@@ -201,7 +203,9 @@
 		</div>
 
 		<div>
-			<h2 class="text-eco-gradient text-5xl font-bold">Conheça os nossos parceiros</h2>
+			<h2 class="text-eco-gradient text-5xl leading-normal font-bold">
+				Conheça os nossos parceiros
+			</h2>
 
 			<h3 class="mt-6 text-3xl text-dark-green max-w-[447px]">
 				Ao unirmos forças, aumentamos a eficácia das nossas iniciativas para <span class="font-bold"
@@ -227,6 +231,28 @@
 <section class="container mx-auto px-4 mt-36">
 	<Faqs />
 </section>
+
+<div class="container mx-auto px-4 mt-36">
+	<h2 class="text-eco-gradient text-5xl leading-normal font-bold text-center max-w-[740px] mx-auto">
+		Faça o Download do EcoReport e Junte-se à Comunidade
+	</h2>
+
+	<div class="mt-10 max-w-[596px] mx-auto text-center">
+		<p class="font-bold text-xl">
+			Torne-se um participante ativo na denúncia de áreas poluídas e contribua para a preservação do
+			nosso ambiente natural.
+		</p>
+
+		<p class="mt-8">Juntos, podemos ter um impacto positivo em Portugal.</p>
+	</div>
+
+	<div class="grid place-content-center">
+		<button
+			class="mt-10 bg-gradient-to-r from-[#17742F] to-[#E0E482] text-white text-xl py-2 px-8 rounded-[34px]"
+			type="button">Transfira a aplicação</button
+		>
+	</div>
+</div>
 
 <style>
 	.urban {
