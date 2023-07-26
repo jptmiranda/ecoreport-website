@@ -19,7 +19,8 @@
 				autoplayInterval: 3000,
 				loop: true,
 				slideGap: '24px',
-				slidesToShow: 1
+				slidesToShow: 1,
+				draggable: false
 			},
 			'(min-width: 576px)': {
 				slidesToShow: 2
