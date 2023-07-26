@@ -34,19 +34,21 @@
 	];
 </script>
 
-<section class="container mx-auto px-4 lg:px-8 mt-36">
-	<h2 class="text-eco-gradient text-5xl leading-normal font-bold text-center">
+<section class="container mx-auto px-4 lg:px-8 mt-12 xl:mt-36">
+	<h2
+		class="text-eco-gradient text-2xl sm:text-3xl xl:text-5xl leading-normal font-bold text-center"
+	>
 		Perguntas Frequentes
 	</h2>
 
-	<div class="hs-accordion-group divide-y mt-10 last:border-b">
+	<div class="hs-accordion-group divide-y mt-4 xl:mt-10 last:border-b">
 		{#each faqs as faq}
 			<div
 				class="hs-accordion bg-white -mt-px"
 				id="hs-basic-with-title-and-arrow-stretched-heading-one"
 			>
 				<button
-					class="hs-accordion-toggle hs-accordion-active:text-dark-green group py-8 inline-flex items-center justify-between gap-x-3 w-full font-semibold text-left transition text-2xl"
+					class="hs-accordion-toggle hs-accordion-active:text-dark-green group py-8 inline-flex items-center justify-between gap-x-3 w-full font-semibold text-left transition text-lg lg:text-xl xl:text-2xl"
 					aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-one"
 				>
 					{faq.question}

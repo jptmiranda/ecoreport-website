@@ -9,7 +9,7 @@
 	});
 </script>
 
-<section class="container mx-auto px-4 lg:px-8 mt-14">
+<section class="container mx-auto px-4 lg:px-8 mt-8 lg:mt-14">
 	<div
 		class="flex flex-col items-center lg:flex-row lg:justify-center lg:items-start gap-x-14 xl:gap-x-28"
 	>

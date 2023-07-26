@@ -13,7 +13,7 @@
 
 <Navbar />
 
-<main class="pb-28">
+<main class="pb-16 lg:pb-20 xl:pb-28">
 	<slot />
 </main>
 

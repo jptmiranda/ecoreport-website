@@ -41,12 +41,14 @@
 </script>
 
 <section class="container mx-auto px-4 lg:px-8 mt-8">
-	<h2 class="text-center max-w-2xl mx-auto text-dark-green text-[32px] leading-[130%]">
+	<h2
+		class="text-center max-w-xl xl:max-w-3xl mx-auto text-dark-green text-2xl sm:text-3xl xl:text-5xl leading-normal"
+	>
 		O EcoReport torna
 		<span class="font-bold"> fácil e acessível reportar áreas poluídas</span>.
 	</h2>
 
-	<h3 class="mt-12 text-center max-w-2xl mx-auto text-[32px] leading-[130%]">
+	<h3 class="mt-8 xl:mt-12 text-center max-w-2xl mx-auto text-xl sm:text-2xl xl:text-4xl">
 		Report em menos de <span class="font-bold">1 min!</span>
 	</h3>
 
@@ -74,13 +76,15 @@
 	</div>
 </section>
 
-<section class="container mx-auto px-4 lg:px-8 mt-24">
-	<h2 class="mx-auto max-w-2xl text-center text-4xl text-eco-gradient">
+<section class="container mx-auto px-4 lg:px-8 mt-12 sm:mt-24">
+	<h2
+		class="mx-auto max-w-xl xl:max-w-3xl text-eco-gradient text-center text-2xl sm:text-3xl xl:text-5xl leading-normal"
+	>
 		Quando encontrar uma área poluída
 		<span class="font-bold">fotografe e inclua a geolocalização</span>
 	</h2>
 
-	<p class="mt-8 mx-auto max-w-2xl text-2xl text-center">
+	<p class="mt-6 xl:mt-8 mx-auto max-w-xl xl:max-w-2xl text-lg sm:text-xl xl:text-2xl text-center">
 		Garantimos que o report é enviado para a entidade responsável por limpar a zona indentificada,
 		garantido que a <span class="font-bold">situação é resolvida de forma rápida e eficaz</span>.
 	</p>
