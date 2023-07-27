@@ -45,9 +45,10 @@
 
 		const increaseNumberRecursive = (i: number, finalNumber: number) => {
 			if (i <= finalNumber) {
+				const difference = Math.abs(finalNumber - i);
+
 				if (displayValue) displayValue.innerHTML = nFormatter(i, 1);
 
-				const difference = Math.abs(finalNumber - i);
 				setTimeout(
 					function () {
 						const increaseFactor = getIncreaseFactor(
@@ -68,9 +69,9 @@
 	<div
 		bind:this={displayValue}
 		id="displayValue"
-		class="text-5xl font-bold leading-normal"
-		class:text-red-400={type === 'negative'}
-		class:text-[#81AF5B]={type === 'positive'}
+		class="text-2xl sm:text-3xl xl:text-5xl font-bold leading-normal"
+		class:text-red-500={type === 'negative'}
+		class:text-green={type === 'positive'}
 	>
 		0
 	</div>

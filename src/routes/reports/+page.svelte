@@ -13,7 +13,7 @@
 		Analytics
 	</h1>
 
-	<div class="flex gap-x-24 justify-center mt-16">
+	<div class="flex flex-col sm:flex-row gap-4 sm:gap-12 lg:gap-x-24 justify-center mt-6 xl:mt-16">
 		<Counter value={totalReports} description="Total de Reports" />
 		<Counter value={unsolvedReports} description="Reports por Resolver" type="negative" />
 		<Counter value={solvedReports} description="Reports Resolvidos" type="positive" />
