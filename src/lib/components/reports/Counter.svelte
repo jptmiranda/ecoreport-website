@@ -27,38 +27,32 @@
 
 	onMount(() => {
 		const getIncreaseFactor = (value: number) => {
-			if (value < 100) {
+			if (value <= 100) {
 				return 1;
-			} else if (value > 100 && value <= 1000) {
+			} else if (value <= 1000) {
 				return 10;
-			} else if (value > 1000 && value <= 10000) {
+			} else if (value <= 10000) {
 				return 100;
 			} else {
 				return 1000;
 			}
 		};
 
-		const increaseElementNumber = () => {
-			const finalNumber = value;
-			increaseNumberRecursive(0, finalNumber);
-		};
+		const increaseElementNumber = (i = 0) => {
+			if (i >= value) return;
 
-		const increaseNumberRecursive = (i: number, finalNumber: number) => {
-			if (i <= finalNumber) {
-				const difference = Math.abs(finalNumber - i);
+			const difference = Math.abs(value - i);
+			const increaseFactorValue = getIncreaseFactor(value);
+			const increaseFactor = getIncreaseFactor(
+				difference >= increaseFactorValue ? value : difference
+			);
+			const delay = difference >= increaseFactorValue ? 20 : 5;
 
-				if (displayValue) displayValue.innerHTML = nFormatter(i, 1);
+			i += increaseFactor;
 
-				setTimeout(
-					function () {
-						const increaseFactor = getIncreaseFactor(
-							difference >= getIncreaseFactor(finalNumber) ? finalNumber : difference
-						);
-						increaseNumberRecursive(i + increaseFactor, finalNumber);
-					},
-					difference >= getIncreaseFactor(finalNumber) ? 20 : 5
-				);
-			}
+			if (displayValue) displayValue.innerHTML = nFormatter(i, 1);
+
+			setTimeout(() => increaseElementNumber(i), delay);
 		};
 
 		increaseElementNumber();
