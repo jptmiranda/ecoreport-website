@@ -12,7 +12,7 @@
 			{ value: 1, symbol: '' },
 			{ value: 1e3, symbol: 'K' },
 			{ value: 1e6, symbol: 'M' },
-			{ value: 1e9, symbol: 'G' }
+			{ value: 1e9, symbol: 'B' }
 		];
 		const regex = /\.0+$|(\.[0-9]*[1-9])0+$/;
 		const item = lookup
@@ -33,8 +33,16 @@
 				return 10;
 			} else if (value <= 10000) {
 				return 100;
-			} else {
+			} else if (value <= 100000) {
 				return 1000;
+			} else if (value <= 1000000) {
+				return 10000;
+			} else if (value <= 10000000) {
+				return 100000;
+			} else if (value <= 100000000) {
+				return 1000000;
+			} else {
+				return 10000000;
 			}
 		};
 
