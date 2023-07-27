@@ -26,24 +26,20 @@
 	};
 
 	onMount(() => {
-		const getIncreaseFactor = (value: number) => {
-			if (value <= 100) {
-				return 1;
-			} else if (value <= 1000) {
-				return 10;
-			} else if (value <= 10000) {
-				return 100;
-			} else if (value <= 100000) {
-				return 1000;
-			} else if (value <= 1000000) {
-				return 10000;
-			} else if (value <= 10000000) {
-				return 100000;
-			} else if (value <= 100000000) {
-				return 1000000;
-			} else {
-				return 10000000;
+		const getIncreaseFactor = (value: number): number => {
+			const thresholds = [1, 10, 100, 1000, 10000, 100000, 1000000, 10000000];
+			let result = thresholds[0];
+
+			for (let i = 1; i < thresholds.length; i++) {
+				if (value <= thresholds[i]) {
+					result = thresholds[i - 1];
+					break;
+				}
+
+				result = 10000000;
 			}
+
+			return result;
 		};
 
 		const increaseElementNumber = (i = 0) => {
