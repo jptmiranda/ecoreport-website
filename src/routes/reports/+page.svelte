@@ -2,7 +2,7 @@
 	import Counter from '$lib/components/reports/Counter.svelte';
 
 	const totalReports = 2147483647;
-	const unsolvedReports = 30800;
+	const unsolvedReports = 30800000;
 	const solvedReports = 25712;
 </script>
 
