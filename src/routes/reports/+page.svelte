@@ -1,9 +1,9 @@
 <script lang="ts">
 	import Counter from '$lib/components/reports/Counter.svelte';
 
-	const totalReports = 2147483647;
-	const unsolvedReports = 30800000;
-	const solvedReports = 25712;
+	const totalReports = 29312;
+	const unsolvedReports = 15410;
+	const solvedReports = 14902;
 </script>
 
 <section class="container mx-auto px-4 lg:px-8 mt-8 lg:mt-12">
