@@ -71,7 +71,7 @@
 		id="displayValue"
 		class="text-2xl sm:text-3xl xl:text-5xl font-bold leading-normal"
 		class:text-red-500={type === 'negative'}
-		class:text-green={type === 'positive'}
+		class:text-[#81AF5B]={type === 'positive'}
 	>
 		0
 	</div>
