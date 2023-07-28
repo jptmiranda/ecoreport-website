@@ -12,7 +12,8 @@
 				slidesToShow: 1,
 				loop: true,
 				slideGap: '25px',
-				draggable: false
+				draggable: false,
+				stopAutoplayOnInteraction: false
 			},
 			'(min-width: 576px)': {
 				slidesToShow: 2
