@@ -37,11 +37,9 @@
 		"typescript": "^5.0.0",
 		"unplugin-icons": "^0.16.5",
 		"vite": "^4.4.2",
-		"vitest": "^0.32.2"
-	},
-	"type": "module",
-	"dependencies": {
+		"vitest": "^0.32.2",
 		"blaze-slider": "^1.9.3",
 		"svelte-cloudinary": "^1.0.3"
-	}
+	},
+	"type": "module"
 }
