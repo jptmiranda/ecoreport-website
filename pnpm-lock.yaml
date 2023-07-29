@@ -11,6 +11,9 @@ devDependencies:
   '@playwright/test':
     specifier: ^1.28.1
     version: 1.36.1
+  '@storyblok/svelte':
+    specifier: ^3.1.1
+    version: 3.1.1(svelte@4.1.1)
   '@sveltejs/adapter-auto':
     specifier: ^2.0.0
     version: 2.1.0(@sveltejs/kit@1.22.3)
@@ -26,6 +29,9 @@ devDependencies:
   '@typescript-eslint/parser':
     specifier: ^5.45.0
     version: 5.62.0(eslint@8.45.0)(typescript@5.1.6)
+  '@vitejs/plugin-basic-ssl':
+    specifier: ^1.0.1
+    version: 1.0.1(vite@4.4.5)
   autoprefixer:
     specifier: ^10.4.14
     version: 10.4.14(postcss@8.4.26)
@@ -524,6 +530,21 @@ packages:
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
     dev: true
 
+  /@storyblok/js@2.2.3:
+    resolution: {integrity: sha512-6Bj3SHL+YGMRMSi3LkXNvGKTOTwczACl113+ptb5aJ+9baTlbNlFBn1lF5+FU4hugfpM/egBlQkNQCBNCRB3Qw==}
+    dependencies:
+      storyblok-js-client: 5.12.0
+    dev: true
+
+  /@storyblok/svelte@3.1.1(svelte@4.1.1):
+    resolution: {integrity: sha512-+8LoiNGBUUbePup38V8HdA3KeM2liB9L3bROG81mIPqbv8Vu3ydiZL2P6CRMqx2CA8065yzQXsB51LRKfpQmYQ==}
+    peerDependencies:
+      svelte: ^3.0.0 || ^4.0.0
+    dependencies:
+      '@storyblok/js': 2.2.3
+      svelte: 4.1.1
+    dev: true
+
   /@sveltejs/adapter-auto@2.1.0(@sveltejs/kit@1.22.3):
     resolution: {integrity: sha512-o2pZCfATFtA/Gw/BB0Xm7k4EYaekXxaPGER3xGSY3FvzFJGTlJlZjBseaXwYSM94lZ0HniOjTokN3cWaLX6fow==}
     peerDependencies:
@@ -809,6 +830,15 @@ packages:
     transitivePeerDependencies:
       - encoding
       - supports-color
+    dev: true
+
+  /@vitejs/plugin-basic-ssl@1.0.1(vite@4.4.5):
+    resolution: {integrity: sha512-pcub+YbFtFhaGRTo1832FQHQSHvMrlb43974e2eS8EKleR3p1cDdkJFPci1UhwkEf1J9Bz+wKBSzqpKp7nNj2A==}
+    engines: {node: '>=14.6.0'}
+    peerDependencies:
+      vite: ^3.0.0 || ^4.0.0
+    dependencies:
+      vite: 4.4.5(@types/node@20.4.2)
     dev: true
 
   /@vitest/expect@0.32.4:
@@ -2515,6 +2545,10 @@ packages:
 
   /std-env@3.3.3:
     resolution: {integrity: sha512-Rz6yejtVyWnVjC1RFvNmYL10kgjC49EOghxWn0RFqlCHGFpQx+Xe7yW3I4ceK1SGrWIGMjD5Kbue8W/udkbMJg==}
+    dev: true
+
+  /storyblok-js-client@5.12.0:
+    resolution: {integrity: sha512-g096AwVtRfs+epfvuiQlI4RDTRcn+/h+WxkWQd8rm95MnRzgZMo1LJcg9NQU8Hy172dvrcjH2+DBsPxw0NAoYw==}
     dev: true
 
   /streamsearch@1.1.0:
