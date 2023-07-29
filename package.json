@@ -18,6 +18,8 @@
 		"@iconify-json/fe": "^1.1.6",
 		"@playwright/test": "^1.28.1",
 		"@storyblok/svelte": "^3.1.1",
+		"@supabase/auth-helpers-sveltekit": "^0.10.1",
+		"@supabase/supabase-js": "^2.31.0",
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/adapter-vercel": "^3.0.2",
 		"@sveltejs/kit": "^1.20.4",
