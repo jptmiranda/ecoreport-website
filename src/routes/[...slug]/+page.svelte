@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { StoryblokComponent, getStoryblokApi, useStoryblokBridge } from '@storyblok/svelte';
+	import { StoryblokComponent, useStoryblokBridge } from '@storyblok/svelte';
 
 	export let data;
 
