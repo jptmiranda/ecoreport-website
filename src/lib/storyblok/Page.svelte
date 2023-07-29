@@ -1,0 +1,13 @@
+<script lang="ts">
+	import { storyblokEditable, StoryblokComponent } from '@storyblok/svelte';
+
+	export let blok: any;
+</script>
+
+{#key blok}
+	<div use:storyblokEditable={blok} class="px-6">
+		{#each blok.body as subBlok}
+			<StoryblokComponent blok={subBlok} />
+		{/each}
+	</div>
+{/key}
