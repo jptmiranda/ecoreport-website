@@ -1,13 +1,10 @@
 export const load = async ({ parent }) => {
 	const { supabase } = await parent();
-
-	const { data: resolvedCount } = await supabase.rpc('count_reports', { arg_is_resolved: true });
-	const { data: unresolvedCount } = await supabase.rpc('count_reports', { arg_is_resolved: false });
-	const totalCount = resolvedCount + unresolvedCount;
+	const { data } = await supabase.rpc('count_reports');
 
 	return {
-		resolvedCount,
-		unresolvedCount,
-		totalCount
+		resolvedCount: data.resolved,
+		unresolvedCount: data.unresolved,
+		totalCount: data.total
 	};
 };
