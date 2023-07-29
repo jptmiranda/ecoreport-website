@@ -4,7 +4,7 @@ export async function GET() {
 		'Content-Type': 'application/xml'
 	};
 
-	const pages = ['app', 'partnerships', 'reports', 'sponsors'];
+	const pages = ['app', 'partnerships', 'reports', 'sponsors', 'test'];
 	const website = 'https://www.ecoreport.pt';
 
 	return new Response(
