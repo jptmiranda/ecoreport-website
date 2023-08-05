@@ -1,5 +1,4 @@
 <script lang="ts">
-	import watcher from '$lib/utils';
 	import { onMount } from 'svelte';
 
 	export let value: number;

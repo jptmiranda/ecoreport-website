@@ -1,12 +1,9 @@
 <script lang="ts">
 	import Counter from '$lib/components/reports/Counter.svelte';
-	import { writable } from 'svelte/store';
+	import MonthlyGraph from '$lib/components/reports/MonthlyGraph.svelte';
+	import type { PageData } from './$types';
 
-	export let data;
-
-	let totalCount = writable(data.totalCount);
-	let unresolvedCount = writable(data.unresolvedCount);
-	let resolvedCount = writable(data.resolvedCount);
+	export let data: PageData;
 
 	data.supabase
 		.channel('schema-db-changes')
@@ -20,9 +17,9 @@
 				if (payload.table === 'reports') {
 					const { data: count } = await data.supabase.rpc('count_reports');
 
-					resolvedCount.set(count.resolved);
-					unresolvedCount.set(count.unresolved);
-					totalCount.set(count.total);
+					data.totalCount = count.total;
+					data.unresolvedCount = count.unresolved;
+					data.resolvedCount = count.resolved;
 				}
 			}
 		)
@@ -37,8 +34,10 @@
 	</h1>
 
 	<div class="flex flex-col sm:flex-row gap-4 sm:gap-12 lg:gap-x-24 justify-center mt-6 xl:mt-16">
-		<Counter value={$totalCount} description="Total de Reports" />
-		<Counter value={$unresolvedCount} description="Reports por Resolver" type="negative" />
-		<Counter value={$resolvedCount} description="Reports Resolvidos" type="positive" />
+		<Counter value={data.totalCount} description="Total de Reports" />
+		<Counter value={data.unresolvedCount} description="Reports por Resolver" type="negative" />
+		<Counter value={data.resolvedCount} description="Reports Resolvidos" type="positive" />
 	</div>
 </section>
+
+<MonthlyGraph data={data.monthlyCount} />
