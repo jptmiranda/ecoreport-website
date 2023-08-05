@@ -1,12 +1,16 @@
 <script lang="ts">
 	import Counter from '$lib/components/reports/Counter.svelte';
-	import { writable } from 'svelte/store';
+	import Overtime from '$lib/components/reports/Overtime.svelte';
+	import { derived, writable } from 'svelte/store';
 
 	export let data;
 
 	let totalCount = writable(data.totalCount);
 	let unresolvedCount = writable(data.unresolvedCount);
 	let resolvedCount = writable(data.resolvedCount);
+	let monthly = writable(data.monthly);
+
+	console.log(data.test);
 
 	data.supabase
 		.channel('schema-db-changes')
@@ -41,4 +45,8 @@
 		<Counter value={$unresolvedCount} description="Reports por Resolver" type="negative" />
 		<Counter value={$resolvedCount} description="Reports Resolvidos" type="positive" />
 	</div>
+</section>
+
+<section class="container mx-auto px-4 lg:px-8 mt-12 xl:mt-36">
+	<Overtime data={$monthly} />
 </section>
