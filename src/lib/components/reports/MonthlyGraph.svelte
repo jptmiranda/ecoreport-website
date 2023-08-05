@@ -15,28 +15,6 @@
 		}),
 		datasets: [
 			{
-				label: 'Resolved',
-				data: data.map((month: any) => month.resolved),
-				borderColor: '#81AF5B',
-				backgroundColor: (context: any) => {
-					const backgroundColor = 'rgba(129, 175, 91, 0.3)';
-
-					if (!context.chart.chartArea) return;
-					const {
-						ctx,
-						chartArea: { top, bottom }
-					} = context.chart;
-					const gradientBg = ctx.createLinearGradient(0, top, 0, bottom);
-
-					gradientBg.addColorStop(0, backgroundColor);
-					gradientBg.addColorStop(1, 'rgba(129, 175, 91, 0)');
-
-					return gradientBg;
-				},
-				tension: 0.4,
-				fill: true
-			},
-			{
 				label: 'Total',
 				data: data.map((month: any) => month.total),
 				borderColor: '#FF5A5A',
@@ -56,7 +34,31 @@
 					return gradientBg;
 				},
 				tension: 0.4,
-				fill: true
+				fill: true,
+				order: 0
+			},
+			{
+				label: 'Resolved',
+				data: data.map((month: any) => month.resolved),
+				borderColor: '#81AF5B',
+				backgroundColor: (context: any) => {
+					const backgroundColor = 'rgba(129, 175, 91, 0.3)';
+
+					if (!context.chart.chartArea) return;
+					const {
+						ctx,
+						chartArea: { top, bottom }
+					} = context.chart;
+					const gradientBg = ctx.createLinearGradient(0, top, 0, bottom);
+
+					gradientBg.addColorStop(0, backgroundColor);
+					gradientBg.addColorStop(1, 'rgba(129, 175, 91, 0)');
+
+					return gradientBg;
+				},
+				tension: 0.4,
+				fill: true,
+				order: 1
 			}
 		]
 	};
