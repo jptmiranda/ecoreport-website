@@ -8,8 +8,7 @@ export default defineConfig({
 		icons({
 			scale: 1.2,
 			compiler: 'svelte'
-		}),
-		process.env.NODE_ENV === 'development' && (await import('@vitejs/plugin-basic-ssl')).default()
+		})
 	],
 	test: {
 		include: ['src/**/*.{test,spec}.{js,ts}']
