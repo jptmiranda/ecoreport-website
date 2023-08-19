@@ -6,6 +6,20 @@
 
 	export let data: MonthlyReport[];
 	let chartElement: HTMLElement;
+	let chart: ApexCharts;
+
+	export const updateGraph = (monthlyCount: MonthlyReport[]) => {
+		chart.updateSeries([
+			{
+				name: 'Total',
+				data: monthlyCount.map((report) => report.total)
+			},
+			{
+				name: 'Resolvidos',
+				data: monthlyCount.map((report) => report.resolved)
+			}
+		]);
+	};
 
 	const options: ApexOptions = {
 		chart: {
@@ -58,7 +72,7 @@
 
 	onMount(async () => {
 		const ApexCharts = (await import('apexcharts')).default;
-		const chart = new ApexCharts(chartElement, options);
+		chart = new ApexCharts(chartElement, options);
 		chart.render();
 	});
 </script>

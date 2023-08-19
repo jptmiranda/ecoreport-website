@@ -21,7 +21,9 @@ const fetchMonthlyCounts = async (supabase: SupabaseClient) => {
 
 export const load = async ({ locals: { supabase } }) => {
 	return {
-		reportsCount: fetchReportsCount(supabase),
-		monthlyCount: fetchMonthlyCounts(supabase)
+		streamed: {
+			reportsCount: fetchReportsCount(supabase),
+			monthlyCount: fetchMonthlyCounts(supabase)
+		}
 	};
 };

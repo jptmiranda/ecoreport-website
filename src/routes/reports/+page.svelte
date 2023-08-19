@@ -1,11 +1,13 @@
 <script lang="ts">
 	import Counter from '$lib/components/reports/Counter.svelte';
 	import MonthlyGraph from '$lib/components/reports/MonthlyGraph.svelte';
-	import type { MonthlyReport } from '$lib/types';
 	import { onMount } from 'svelte';
 	import type { PageData } from './$types';
+	import type { MonthlyReport } from '$lib/types';
 
 	export let data: PageData;
+	let monthlyGraph: MonthlyGraph;
+	let count = { total: 0, unresolved: 0, resolved: 0 };
 
 	onMount(() => {
 		data.supabase
@@ -18,17 +20,15 @@
 				},
 				async (payload) => {
 					if (payload.table === 'reports') {
-						const { data: count } = await data.supabase.rpc('count_reports');
+						const { data: reportsCount } = await data.supabase.rpc('count_reports');
 						const { data: monthlyCount } = (await data.supabase
 							.from('monthly_reports_count')
 							.select()) as {
 							data: MonthlyReport[];
 						};
 
-						data.reportsCount.total = count.total;
-						data.reportsCount.unresolved = count.unresolved;
-						data.reportsCount.resolved = count.resolved;
-						data.monthlyCount = monthlyCount;
+						count = reportsCount;
+						monthlyGraph.updateGraph(monthlyCount);
 					}
 				}
 			)
@@ -44,20 +44,28 @@
 	</h1>
 
 	<div class="flex flex-col sm:flex-row gap-4 sm:gap-12 lg:gap-x-24 justify-center mt-6 xl:mt-16">
-		{#await data.reportsCount}
+		{#await data.streamed.reportsCount}
 			<Counter value={0} description="Total de Reports" />
 			<Counter value={0} description="Reports por Resolver" type="negative" />
 			<Counter value={0} description="Reports Resolvidos" type="positive" />
 		{:then reportsCount}
-			<Counter value={reportsCount.total} description="Total de Reports" />
-			<Counter value={reportsCount.unresolved} description="Reports por Resolver" type="negative" />
-			<Counter value={reportsCount.resolved} description="Reports Resolvidos" type="positive" />
+			<Counter value={count.total || reportsCount.total} description="Total de Reports" />
+			<Counter
+				value={count.unresolved || reportsCount.unresolved}
+				description="Reports por Resolver"
+				type="negative"
+			/>
+			<Counter
+				value={count.resolved || reportsCount.resolved}
+				description="Reports Resolvidos"
+				type="positive"
+			/>
 		{/await}
 	</div>
 </section>
 
-{#await data.monthlyCount}
+{#await data.streamed.monthlyCount}
 	Loading...
 {:then monthlyCount}
-	<MonthlyGraph data={monthlyCount} />
+	<MonthlyGraph data={monthlyCount} bind:this={monthlyGraph} />
 {/await}
