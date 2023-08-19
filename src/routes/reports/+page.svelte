@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Counter from '$lib/components/reports/Counter.svelte';
 	import MonthlyGraph from '$lib/components/reports/MonthlyGraph.svelte';
+	import type { MonthlyReport } from '$lib/types';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -16,10 +17,16 @@
 			async (payload) => {
 				if (payload.table === 'reports') {
 					const { data: count } = await data.supabase.rpc('count_reports');
+					const { data: monthlyCount } = (await data.supabase
+						.from('monthly_reports_count')
+						.select()) as {
+						data: MonthlyReport[];
+					};
 
-					data.totalCount = count.total;
-					data.unresolvedCount = count.unresolved;
-					data.resolvedCount = count.resolved;
+					data.reportsCount.total = count.total;
+					data.reportsCount.unresolved = count.unresolved;
+					data.reportsCount.resolved = count.resolved;
+					data.monthlyCount = monthlyCount;
 				}
 			}
 		)
@@ -34,10 +41,20 @@
 	</h1>
 
 	<div class="flex flex-col sm:flex-row gap-4 sm:gap-12 lg:gap-x-24 justify-center mt-6 xl:mt-16">
-		<Counter value={data.totalCount} description="Total de Reports" />
-		<Counter value={data.unresolvedCount} description="Reports por Resolver" type="negative" />
-		<Counter value={data.resolvedCount} description="Reports Resolvidos" type="positive" />
+		{#await data.reportsCount}
+			<Counter value={0} description="Total de Reports" />
+			<Counter value={0} description="Reports por Resolver" type="negative" />
+			<Counter value={0} description="Reports Resolvidos" type="positive" />
+		{:then reportsCount}
+			<Counter value={reportsCount.total} description="Total de Reports" />
+			<Counter value={reportsCount.unresolved} description="Reports por Resolver" type="negative" />
+			<Counter value={reportsCount.resolved} description="Reports Resolvidos" type="positive" />
+		{/await}
 	</div>
 </section>
 
-<MonthlyGraph data={data.monthlyCount} />
+{#await data.monthlyCount}
+	Loading...
+{:then monthlyCount}
+	<MonthlyGraph data={monthlyCount} />
+{/await}
