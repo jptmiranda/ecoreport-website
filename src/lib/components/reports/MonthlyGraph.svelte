@@ -1,102 +1,68 @@
 <script lang="ts">
+	import type { MonthlyReport } from '$lib/types';
 	import Utils from '$lib/utils';
-	import Chart, { type ChartItem } from 'chart.js/auto';
+	import type { ApexOptions } from 'apexcharts';
 	import { onMount } from 'svelte';
 
-	export let data;
+	export let data: MonthlyReport[];
+	let chartElement: HTMLElement;
 
-	let chartElement: ChartItem;
-
-	const parsedData = {
-		labels: data.map((month: any) => {
-			let date = new Date(month.month);
-
-			return Utils.getMonthText(date.getMonth()) + ' ' + date.getFullYear();
-		}),
-		datasets: [
+	const options: ApexOptions = {
+		chart: {
+			type: 'area',
+			height: 280,
+			animations: {
+				speed: 300,
+				animateGradually: {
+					delay: 0
+				}
+			},
+			toolbar: { show: false }
+		},
+		dataLabels: {
+			enabled: false
+		},
+		markers: {
+			size: 4
+		},
+		stroke: {
+			curve: 'smooth'
+		},
+		fill: {
+			type: 'gradient',
+			gradient: {
+				shadeIntensity: 1,
+				opacityFrom: 0.4,
+				opacityTo: 0.6,
+				stops: [0, 90, 100]
+			}
+		},
+		series: [
 			{
-				label: 'Total',
-				data: data.map((month: any) => month.total),
-				borderColor: '#FF5A5A',
-				backgroundColor: (context: any) => {
-					const backgroundColor = 'rgba(255, 90, 90, 0.3)';
-
-					if (!context.chart.chartArea) return;
-					const {
-						ctx,
-						chartArea: { top, bottom }
-					} = context.chart;
-					const gradientBg = ctx.createLinearGradient(0, top, 0, bottom);
-
-					gradientBg.addColorStop(0, backgroundColor);
-					gradientBg.addColorStop(1, 'rgba(255, 90, 90, 0)');
-
-					return gradientBg;
-				},
-				tension: 0.4,
-				fill: true,
-				order: 0
+				name: 'Total',
+				data: data.map((report) => report.total)
 			},
 			{
-				label: 'Resolved',
-				data: data.map((month: any) => month.resolved),
-				borderColor: '#81AF5B',
-				backgroundColor: (context: any) => {
-					const backgroundColor = 'rgba(129, 175, 91, 0.3)';
-
-					if (!context.chart.chartArea) return;
-					const {
-						ctx,
-						chartArea: { top, bottom }
-					} = context.chart;
-					const gradientBg = ctx.createLinearGradient(0, top, 0, bottom);
-
-					gradientBg.addColorStop(0, backgroundColor);
-					gradientBg.addColorStop(1, 'rgba(129, 175, 91, 0)');
-
-					return gradientBg;
-				},
-				tension: 0.4,
-				fill: true,
-				order: 1
+				name: 'Resolvidos',
+				data: data.map((report) => report.resolved)
 			}
-		]
+		],
+		xaxis: {
+			categories: data.map((report) => {
+				let date = new Date(report.month);
+
+				return Utils.getMonthText(date.getMonth()) + ' ' + date.getFullYear();
+			})
+		}
 	};
 
-	onMount(() => {
-		new Chart(chartElement, {
-			type: 'line',
-			data: parsedData,
-			options: {
-				responsive: true,
-				plugins: {
-					legend: {
-						position: 'bottom'
-					}
-				},
-				scales: {
-					x: {
-						grid: {
-							display: false
-						}
-					}
-				}
-			}
-		});
+	onMount(async () => {
+		const ApexCharts = (await import('apexcharts')).default;
+		const chart = new ApexCharts(chartElement, options);
+		chart.render();
 	});
 </script>
 
-<section class="container mx-auto px-4 lg:px-8 mt-8 lg:mt-12">
-	<h2
-		class="text-eco-gradient font-bold text-xl sm:text-2xl xl:text-4xl leading-normal text-center"
-	>
-		Total de Reports
-	</h2>
-
-	<p class="text-lg sm:text-xl text-center mt-4">
-		O número de reports submetidos até o momento. Essa métrica mostra a dimensão do<br /> problema da
-		poluição em Portugal e a importância de ação coletiva.
-	</p>
-
-	<canvas class="mt-16" bind:this={chartElement} />
+<section class="container mx-auto">
+	<div bind:this={chartElement} />
 </section>
