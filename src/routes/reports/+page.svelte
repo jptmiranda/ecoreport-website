@@ -64,8 +64,10 @@
 	</div>
 </section>
 
-{#await data.streamed.monthlyCount}
-	Loading...
-{:then monthlyCount}
-	<MonthlyGraph data={monthlyCount} bind:this={monthlyGraph} />
-{/await}
+<section class="container mx-auto px-4 lg:px-8 mt-8 lg:mt-12">
+	{#await data.streamed.monthlyCount}
+		Loading...
+	{:then monthlyCount}
+		<MonthlyGraph data={monthlyCount} bind:this={monthlyGraph} />
+	{/await}
+</section>

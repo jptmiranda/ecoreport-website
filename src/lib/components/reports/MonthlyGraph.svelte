@@ -77,6 +77,4 @@
 	});
 </script>
 
-<section class="container mx-auto">
-	<div bind:this={chartElement} />
-</section>
+<div bind:this={chartElement} />
