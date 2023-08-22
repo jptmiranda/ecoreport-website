@@ -7,11 +7,11 @@
 	import Metrics from '$lib/components/homepage/Metrics.svelte';
 	import Partnerships from '$lib/components/homepage/Partnerships.svelte';
 	import PolutionTypes from '$lib/components/homepage/PolutionTypes.svelte';
-	import ProviderCarousel from '$lib/components/homepage/ProviderCarousel.svelte';
+	// import ProviderCarousel from '$lib/components/homepage/ProviderCarousel.svelte';
 </script>
 
 <Hero />
-<ProviderCarousel />
+<!-- <ProviderCarousel /> -->
 <AppCarousel />
 <PolutionTypes />
 <Goal />

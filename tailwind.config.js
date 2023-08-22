@@ -16,7 +16,11 @@ export default {
 			colors: {
 				'dark-green': '#17742f',
 				green: '#E0E482',
-				'light-green': '#F9FAE6'
+				'light-green': '#F9FAE6',
+				grey: '#312F2E'
+			},
+			fontFamily: {
+				'uncut-sans': ['Uncut Sans']
 			}
 		}
 	},
