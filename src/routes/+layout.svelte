@@ -1,4 +1,14 @@
 <script>
+	import '@fontsource/uncut-sans/300.css';
+	import '@fontsource/uncut-sans/400.css';
+	import '@fontsource/uncut-sans/500.css';
+	import '@fontsource/uncut-sans/600.css';
+	import '@fontsource/uncut-sans/700.css';
+	import '@fontsource/uncut-sans/300-italic.css';
+	import '@fontsource/uncut-sans/400-italic.css';
+	import '@fontsource/uncut-sans/500-italic.css';
+	import '@fontsource/uncut-sans/600-italic.css';
+	import '@fontsource/uncut-sans/700-italic.css';
 	import '$lib/css/base.css';
 	import '$lib/css/main.postcss';
 	import 'blaze-slider/dist/blaze.css';
