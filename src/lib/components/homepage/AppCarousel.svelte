@@ -33,6 +33,7 @@
 					src={image}
 					alt={`App - Ecrã ${index + 1}`}
 					sizes="100vw"
+					priority={true}
 				/>
 			</div>
 		{/each}

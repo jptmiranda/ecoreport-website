@@ -1,12 +1,5 @@
 <script lang="ts">
-	import { getCldImageUrl } from 'svelte-cloudinary';
-
-	const heroImage = getCldImageUrl({
-		src: 'hero_bg_we3avh',
-		width: 538,
-		height: 538,
-		format: 'webp'
-	});
+	import { CldImage } from 'svelte-cloudinary';
 </script>
 
 <section class="container mx-auto px-4 lg:px-8 mt-8 lg:mt-14">
@@ -45,13 +38,14 @@
 			</div>
 		</div>
 
-		<img
+		<CldImage
 			class="hidden lg:block"
-			src={heroImage}
+			src="hero_bg_we3avh"
 			alt="hero"
 			width="538"
 			height="538"
 			sizes="100vw"
+			priority={true}
 		/>
 	</div>
 </section>

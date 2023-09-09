@@ -19,7 +19,7 @@
 					event: 'INSERT',
 					schema: 'public'
 				},
-				async (payload) => {
+				async (payload: { table: string }) => {
 					if (payload.table === 'reports') {
 						const { data: reportsCount } = await data.supabase.rpc('count_reports');
 						const { data: monthlyCount } = (await data.supabase
