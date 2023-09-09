@@ -20,7 +20,7 @@ export default {
 				grey: '#312F2E'
 			},
 			fontFamily: {
-				'uncut-sans': ['Uncut Sans']
+				'uncut-sans': ['Uncut Sans', 'sans-serif']
 			}
 		}
 	},
