@@ -7,10 +7,7 @@
 
 	const routes = [
 		{ path: '/', text: 'Início' },
-		{ path: '/reports', text: 'Reports' },
-		{ path: '/partnerships', text: 'Parcerias' },
-		{ path: '/sponsors', text: 'Apoios' },
-		{ path: '/app', text: 'App' }
+		{ path: '/reports', text: 'Reports' }
 	];
 </script>
 

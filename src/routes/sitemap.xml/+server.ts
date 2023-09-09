@@ -1,6 +1,6 @@
 export async function GET() {
 	const website = 'https://www.ecoreport.pt';
-	const pages = ['app', 'partnerships', 'reports', 'sponsors'];
+	const pages = ['reports'];
 	const headers = {
 		'Cache-Control': 'max-age=0, s-maxage=3600',
 		'Content-Type': 'application/xml'
