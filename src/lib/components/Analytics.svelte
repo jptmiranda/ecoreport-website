@@ -1,13 +1,3 @@
-<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-JXHVEJJL2B"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				dataLayer.push(arguments);
-			}
-			gtag('js', new Date());
-			gtag('config', 'G-JXHVEJJL2B');
-		</script> -->
-
 <script lang="ts">
 	import { page } from '$app/stores';
 

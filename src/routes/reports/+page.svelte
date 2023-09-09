@@ -4,6 +4,7 @@
 	import { onMount } from 'svelte';
 	import type { PageData } from './$types';
 	import type { MonthlyReport } from '$lib/types';
+	import Analytics from '$lib/components/Analytics.svelte';
 
 	export let data: PageData;
 	let monthlyGraph: MonthlyGraph;
@@ -35,6 +36,10 @@
 			.subscribe();
 	});
 </script>
+
+<svelte:head>
+	<title>EcoReport - Reports</title>
+</svelte:head>
 
 <section class="container mx-auto px-4 lg:px-8 mt-8 lg:mt-12">
 	<h1

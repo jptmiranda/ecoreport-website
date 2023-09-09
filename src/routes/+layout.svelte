@@ -19,7 +19,7 @@
 </script>
 
 <svelte:head>
-	<title>EcoReport</title>
+	<title>EcoReport - Home</title>
 	<meta name="description" content="App for reporting pollution!" />
 	<script>
 		partytown = {
