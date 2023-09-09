@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-	content: ['./src/**/*.{html,js,svelte,ts}', 'node_modules/preline/dist/*.js'],
+	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
 		screens: {
 			sm: '576px',
@@ -23,6 +23,5 @@ export default {
 				'uncut-sans': ['Uncut Sans', 'sans-serif']
 			}
 		}
-	},
-	plugins: [require('preline/plugin')]
+	}
 };
