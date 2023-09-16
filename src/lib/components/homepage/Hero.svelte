@@ -40,7 +40,7 @@
 
 		<CldImage
 			class="hidden lg:block"
-			src="hero_bg_we3avh"
+			src="hero_bg_tvqugo"
 			alt="hero"
 			width="538"
 			height="538"
