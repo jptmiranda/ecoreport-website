@@ -59,10 +59,10 @@
 
 <!-- <Hero /> -->
 <!-- <ProviderCarousel /> -->
-<!-- <AppCarousel />
+<AppCarousel />
 <PolutionTypes />
 <Goal />
 <Metrics />
 <Partnerships />
 <Faqs />
-<DownloadApp /> -->
+<DownloadApp />
