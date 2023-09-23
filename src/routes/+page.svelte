@@ -13,7 +13,7 @@
 </script>
 
 <Section name="app">
-	<div slot="left" class="ml-auto">
+	<div slot="left">
 		<h1
 			class="text-eco-gradient font-bold text-3xl sm:text-4xl xl:text-5xl leading-normal text-center lg:text-left"
 		>
