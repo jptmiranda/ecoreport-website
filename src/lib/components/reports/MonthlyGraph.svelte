@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { MonthlyReport } from '$lib/types';
-	import Utils from '$lib/utils';
+	import { getMonthText } from '$lib/utils';
 	import type { ApexOptions } from 'apexcharts';
 	import { onMount } from 'svelte';
 
@@ -65,7 +65,7 @@
 			categories: data.map((report) => {
 				let date = new Date(report.month);
 
-				return Utils.getMonthText(date.getMonth()) + ' ' + date.getFullYear();
+				return getMonthText(date.getMonth()) + ' ' + date.getFullYear();
 			})
 		}
 	};

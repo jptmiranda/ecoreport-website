@@ -1,3 +1,7 @@
+import { twMerge } from 'tailwind-merge';
+import { clsx } from 'clsx';
+import type { ClassValue } from 'clsx';
+
 const MONTHS = [
 	'Janeiro',
 	'Fevereiro',
@@ -13,7 +17,7 @@ const MONTHS = [
 	'Dezembro'
 ];
 
-function months(config?: { count: number; section?: any; startsOn: number }) {
+const months = (config?: { count: number; section?: any; startsOn: number }) => {
 	let count = config?.count || 12;
 	const section = config?.section;
 	const values = [];
@@ -28,13 +32,12 @@ function months(config?: { count: number; section?: any; startsOn: number }) {
 	}
 
 	return values;
-}
+};
 
-const getMonthText = (month: number) => {
+export const getMonthText = (month: number) => {
 	return MONTHS[month];
 };
 
-export default {
-	months,
-	getMonthText
+export const cn = (...inputs: ClassValue[]) => {
+	return twMerge(clsx(inputs));
 };

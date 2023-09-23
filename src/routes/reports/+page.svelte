@@ -4,7 +4,6 @@
 	import { onMount } from 'svelte';
 	import type { PageData } from './$types';
 	import type { MonthlyReport } from '$lib/types';
-	import Analytics from '$lib/components/Analytics.svelte';
 
 	export let data: PageData;
 	let monthlyGraph: MonthlyGraph;
