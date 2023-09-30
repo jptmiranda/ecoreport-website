@@ -15,7 +15,6 @@
 		"test:unit": "vitest"
 	},
 	"devDependencies": {
-		"@builder.io/partytown": "^0.8.1",
 		"@fontsource/uncut-sans": "^5.0.7",
 		"@iconify-json/fe": "^1.1.6",
 		"@playwright/test": "^1.28.1",
