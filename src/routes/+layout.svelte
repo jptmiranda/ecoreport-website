@@ -19,11 +19,6 @@
 <svelte:head>
 	<title>EcoReport - Home</title>
 	<meta name="description" content="App for reporting pollution!" />
-	<script
-		async
-		src="https://analytics.eu.umami.is/script.js"
-		data-website-id="5f03c60b-938d-41f9-ad8b-879df217bcbc"
-	></script>
 </svelte:head>
 
 <Navbar />
