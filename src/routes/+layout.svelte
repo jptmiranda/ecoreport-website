@@ -15,21 +15,20 @@
 	import { partytownSnippet } from '@builder.io/partytown/integration';
 	import Navbar from '$lib/components/Navbar.svelte';
 	import Footer from '$lib/components/Footer.svelte';
-	import Analytics from '$lib/components/Analytics.svelte';
 </script>
 
 <svelte:head>
 	<title>EcoReport - Home</title>
 	<meta name="description" content="App for reporting pollution!" />
-	<script>
-		partytown = {
-			forward: ['dataLayer.push']
-		};
-	</script>
 	{@html '<script>' + partytownSnippet() + '</script>'}
+	<script
+		type="text/partytown"
+		async
+		src="https://analytics.eu.umami.is/script.js"
+		data-website-id="5f03c60b-938d-41f9-ad8b-879df217bcbc"
+	></script>
 </svelte:head>
 
-<Analytics />
 <Navbar />
 <main class="pb-16 lg:pb-20 xl:pb-28">
 	<slot />
